@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'markdownx',
     'django_cleanup',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
