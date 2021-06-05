@@ -1,5 +1,6 @@
 from django.db import models
 from markdownx.models import MarkdownxField
+from markdownx.utils import markdownify
 
 
 class Tag(models.Model):
@@ -41,3 +42,6 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
+
+    def convert_markdown_to_html(self):
+        return markdownify(self.main_text)
